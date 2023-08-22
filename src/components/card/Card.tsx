@@ -84,9 +84,9 @@
 import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import { getWeatherData } from "../../utils/https.js";
+import CardProps from '..interfaces/.ts';
 
-
-const Card = ({ info }) => {
+const Card: React.FC<CardProps> = ({ info }) => {
   const [temperature, setTemperature] = useState(null);
  const [tempMin,setTempMin] = useState(null);
  const [tempMax,setTempMax] = useState(null);

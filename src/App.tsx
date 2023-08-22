@@ -4,7 +4,7 @@ import NavBar from './components/navBar'
 import Card from './components/card'
 import { getWeatherData } from "./utils/https";
 function App() {
-  const [info, setInfo] = useState(null);
+  const [info, setInfo] = useState<any>(null);
  
   // useEffect(() => {
   //   getWeatherData("/city")
@@ -18,7 +18,7 @@ function App() {
 
 
  
-    const handleSearch = async (searchText) => {
+    const handleSearch = async (searchText : string) => {
      
     try {
       const data = await getWeatherData(searchText);
