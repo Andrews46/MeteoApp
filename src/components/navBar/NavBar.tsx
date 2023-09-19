@@ -1,21 +1,19 @@
- import styles from "./index.module.scss";
+import styles from "./index.module.scss";
 import { useState } from "react";
 
 import NavProps from "../interfaces.ts"
   
-const NavBar:React.FC <NavProps>= ({ onSearch }) => {
+const NavBar:React.FC <NavProps>= ({ onSearch, onSearchs }) => {
   const [search, setSearch] = useState("");
+const[miniSearch,setMiniSearch] = useState("");
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
+    console.log("Valore di search:", search);
+  console.log("Valore di miniSearch:", miniSearch);
     onSearch(search);
+    onSearchs(miniSearch);
   };
-   
-    // const inputText=(e)=>setInfo (e.target.value);
-    
-    // const onHandleSubmit = (e) => {
-    //   e.preventDefault();
-    // };
     return (
       <div className={styles.Navbar}>
         <form onSubmit={onHandleSubmit}>
@@ -27,6 +25,13 @@ const NavBar:React.FC <NavProps>= ({ onSearch }) => {
           placeholder="...scrivi qui"
           
         />
+        <input
+          onChange={(e) => setMiniSearch(e.target.value)}
+          value={miniSearch}
+          type="text"
+          placeholder="...previsione giornaliera"
+        />
+        <button className={styles.btnSearch} type="submit">Cerca</button>
         </form>
       </div>
     );

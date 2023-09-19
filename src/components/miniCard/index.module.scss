@@ -1,0 +1,14 @@
+.MiniCard{
+    display: flex;
+    justify-content: space-between;
+    gap : 20px;
+    transform: translateY(46px);
+    
+    .container{
+        width: 200px;
+        border:2px solid black;
+        color:black;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}

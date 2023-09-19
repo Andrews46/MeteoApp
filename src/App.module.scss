@@ -1,0 +1,19 @@
+body { 
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh; 
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+background-image: url(/7rhrsIf.webp);
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.titleApp{
+  margin:0;
+}
+} 
+

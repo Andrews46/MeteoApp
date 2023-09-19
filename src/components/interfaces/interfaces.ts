@@ -1,12 +1,12 @@
 interface CardProps {
-    info: any [string];
+    info: any;
   }
   
   export default CardProps;
 
 
  interface NavProps{
-    e: any [string];
+    e: any;
  } 
 
  export default NavProps ;
