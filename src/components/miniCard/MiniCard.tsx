@@ -44,7 +44,7 @@ setDailyOre(dailyOreImpostazione);
       {dailyData.map((day, index) => (
         <div key={index} className={styles.container}>
 
-          <h4>{miniInfo?.city?.name}</h4>
+          <h3>{miniInfo?.city?.name}</h3>
           <h3>{` ${dailyOre[index]}`}</h3>
           <h3>{`Temperatura: ${convertKelvinToCelsius(day.main.temp).toFixed(1)}°C`}</h3>
           {day.weather && (

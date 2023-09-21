@@ -7,8 +7,10 @@
     // height: 550px;
     border:2px solid white;
     box-shadow: 0px -2px 10px white;
-    background-color: rgb(46, 46, 221);
-   
+    background: rgb(163,163,163);
+    background: linear-gradient(144deg, rgba(163,163,163,1) 15%, rgba(31,31,255,1) 45%, rgba(1,126,255,1) 66%);
+   border-radius : 12px;
+   color:black;
     .container{
         display : flex;
     flex-direction: column;
@@ -39,6 +41,6 @@
     }
     .Title{
         transform: translateY(60px);
-        color:black;
+        color: white;
     }
 }
