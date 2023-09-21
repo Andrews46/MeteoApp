@@ -1,7 +1,7 @@
 import styles from "./index.module.scss";
 import { useState } from "react";
 
-import NavProps from "../interfaces.ts"
+import NavProps from "../interfaces";
   
 const NavBar:React.FC <NavProps>= ({ onSearch, onSearchs }) => {
   const [search, setSearch] = useState("");

@@ -2,9 +2,8 @@ import { useState } from 'react';
 import styles from './App.module.scss'
 import NavBar from './components/navBar'
 import Card from './components/card'
-import MiniCard from './components/MiniCard';
-import { getWeatherData } from "./utils/https";
-import {getWeatherCardMini} from "./utils/https";
+import MiniCard from './components/miniCard';
+import { getWeatherData ,getWeatherCardMini } from "./utils/https";
 function App() {
   const [info, setInfo] = useState<any>(null);
  const [miniInfo,setMiniInfo]= useState<any>({});

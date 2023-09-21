@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
-import { getWeatherData } from "../../utils/https.js";
 
 const MiniCard = ({ miniInfo }) => {
   const [dailyData, setDailyData] = useState([]);
@@ -15,6 +14,7 @@ const [dailyOre,setDailyOre] = useState([]);
             const data = new Date(forecast.dt_txt);
             console.log(data)
             // return data.toLocaleTimeString([], { hour: '2-digit' });
+            
             return data.toDateString([],{day: ""});
           });
           // Imposta i dati giornalieri nello stato
@@ -34,7 +34,7 @@ setDailyOre(dailyOreImpostazione);
     }
   }, [miniInfo]);
 
-  const convertKelvinToCelsius = (kelvin) => {
+  const convertKelvinToCelsius = (kelvin : number) => {
     return kelvin - 273.15;
   };
   // console.log("ciao sono l orario",dailyOre)

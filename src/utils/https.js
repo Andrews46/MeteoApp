@@ -1,6 +1,10 @@
 const API_KEY = "15197af3f30fed8dd93686eaa72c9ce9";
 const BASE_URL = `https://api.openweathermap.org/data/2.5/weather`;
 
+// declare module './utils/https'{
+
+
+
 const getWeatherData = async (city) => {
   const params = new URLSearchParams({
     q: city,
@@ -52,5 +56,5 @@ const getWeatherCardMini = async (city) => {
     throw new Error(`Error fetching weather data: ${res.status}`);
   }
 };
-
+// }
   export { getWeatherCardMini };

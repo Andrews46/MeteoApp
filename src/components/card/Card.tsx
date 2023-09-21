@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
-import { getWeatherData } from "../../utils/https.js";
-import CardProps from '..interfaces/.ts';
+import {CardProps} from "../interfaces"
 
 const Card: React.FC<CardProps> = ({ info }) => {
   const [temperature, setTemperature] = useState(null);
@@ -27,10 +26,10 @@ const Card: React.FC<CardProps> = ({ info }) => {
     }
   }, [info]);
 
-  const convertKelvinToCelsius = (kelvin) => {
+  const convertKelvinToCelsius = (kelvin : number) => {
     return kelvin - 273.15;
   };
-  const convertToMetriInkmh = (ms)=> {
+  const convertToMetriInkmh = (ms : number)=> {
     return ms * 3.6;
   }
   
