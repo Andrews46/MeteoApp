@@ -1,25 +1,26 @@
 import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
-import {CardProps} from "../interfaces"
 
-const Card: React.FC<CardProps> = ({ info }) => {
+
+const Card=({ info }) => {
   const [temperature, setTemperature] = useState(null);
- const [tempMin,setTempMin] = useState(null);
- const [tempMax,setTempMax] = useState(null);
- const [velocita,setVelocita] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        console.log("Info:", info);
-        
+const [tempMin, setTempMin] = useState(null);
+const [tempMax, setTempMax] = useState(null);
+const [velocita, setVelocita] = useState<number | null>(null);
+//  const declareVariable = (
+//   setTemperature: number,
+//   setTempMin: number ,
+//   setTempMax: number ,
+//   setVelocita: number,
+// )
+ useEffect(() =>{
+    const fetchData =()=>{  
         setTemperature(info.main.temp);
-        setTempMin(info.main?.temp_min);
+        setTempMin(info.main.temp_min);
         setTempMax(info.main.temp_max);
         setVelocita(info.wind.speed)
-      } catch (error) {
-        console.error(error);
-      }
-    };
+     
+    }
 
     if (info) {
       fetchData();

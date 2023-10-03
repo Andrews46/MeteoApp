@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 
-const MiniCard = ({ miniInfo }) => {
+
+const MiniCard  =  ({ miniInfo }) => {
   const [dailyData, setDailyData] = useState([]);
 const [dailyOre,setDailyOre] = useState([]);
   useEffect(() => {
@@ -9,7 +10,8 @@ const [dailyOre,setDailyOre] = useState([]);
       try {
         if (miniInfo && miniInfo.list && miniInfo.list.length > 0) {
           // Estrai i dati giornalieri
-          const dailyForecast = miniInfo.list.filter((forecast, index) => index % 8 === 0);
+          const dailyForecast = miniInfo.list.filter((forecast
+            , index) => index % 8 === 0);
  const dailyOreImpostazione = dailyForecast.map((forecast) => {
             const data = new Date(forecast.dt_txt);
             console.log(data)
@@ -21,7 +23,7 @@ const [dailyOre,setDailyOre] = useState([]);
           setDailyData(dailyForecast);
 setDailyOre(dailyOreImpostazione);
         } else {
-          setDailyData([]); // Nessun dato disponibile
+          setDailyData([]); 
           setDailyOre([])
         }
       } catch (error) {
@@ -42,6 +44,7 @@ setDailyOre(dailyOreImpostazione);
     <div className={styles.MiniCard}>
      
       {dailyData.map((day, index) => (
+        <div className={styles.MiniCardContainer}>
         <div key={index} className={styles.container}>
 
           <h3>{miniInfo?.city?.name}</h3>
@@ -55,6 +58,7 @@ setDailyOre(dailyOreImpostazione);
           )}
           <h4>{`Min Temp: ${convertKelvinToCelsius(day.main.temp_min).toFixed(1)}°C`}</h4>
           <h4>{`Max Temp: ${convertKelvinToCelsius(day.main.temp_max).toFixed(1)}°C`}</h4>
+          </div>
         </div>
       ))}
     </div>

@@ -20,3 +20,13 @@
         }
     }
 }
+@media screen and (max-width: 640px) {
+    .Navbar,form{
+
+        display: flex;
+        flex-direction: column;
+    }
+    .btnSearch{
+       margin-bottom: 10px;
+    }
+}

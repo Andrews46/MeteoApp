@@ -6,12 +6,22 @@
     
     .container{
         width: 200px;
-        border:2px solid black;
         color:black;
-        padding: 10px;
+        padding: 20px 20px;
         margin-bottom: 20px;
-        border-radius: 12px;
-        background: rgb(163,163,163);
+        border-radius: 40px;
 background: linear-gradient(144deg, rgba(163,163,163,1) 15%, rgba(31,31,255,1) 45%, rgba(1,126,255,1) 66%);
-    }
+   
+}
+ @media screen and (max-width: 680px) {
+  .MiniCardContainer{
+ border:2px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  
+
+  }
+}
 }

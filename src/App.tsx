@@ -4,9 +4,22 @@ import NavBar from './components/navBar'
 import Card from './components/card'
 import MiniCard from './components/miniCard';
 import { getWeatherData ,getWeatherCardMini } from "./utils/https";
+
+interface WeatherData  {
+  temperature:number;
+tempMin:number;
+tempMax:number;
+velocita:number;
+}
+interface WeatherCardMiniData{
+  city:string;
+  dailyOre:number;
+  dailyData:number;
+}
+
 function App() {
-  const [info, setInfo] = useState<any>(null);
- const [miniInfo,setMiniInfo]= useState<any>({});
+  const [info, setInfo] = useState<WeatherData | null>(null);
+ const [miniInfo,setMiniInfo]= useState<WeatherCardMiniData| null>(null);
  
     const handleSearch = async (searchText : string) => {
      
@@ -41,7 +54,7 @@ setMiniInfo(data1);
         
 
           
-        {info && <Card info={info} />}
+        {info && <Card info ={info} />}
         
          {info && <MiniCard miniInfo={miniInfo} />}
       </div>

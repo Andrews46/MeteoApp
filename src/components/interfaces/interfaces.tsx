@@ -1,10 +1,6 @@
-interface CardProps {
-    info: any;
-  }
-
 
   interface NavProps {
-   e: any;
+   e: number;
  }
  
- export  {CardProps,NavProps};
+ export  type {NavProps};

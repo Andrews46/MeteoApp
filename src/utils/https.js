@@ -1,7 +1,7 @@
 const API_KEY = "15197af3f30fed8dd93686eaa72c9ce9";
 const BASE_URL = `https://api.openweathermap.org/data/2.5/weather`;
 
-// declare module './utils/https'{
+
 
 
 
