@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 
 
-const Card=({ info }) => {
+const Card=({ info }: { info: { city:{
+  name:"nome della citta"
+},main: any[];
+}
+ }) => {
   const [temperature, setTemperature] = useState(null);
 const [tempMin, setTempMin] = useState(null);
 const [tempMax, setTempMax] = useState(null);

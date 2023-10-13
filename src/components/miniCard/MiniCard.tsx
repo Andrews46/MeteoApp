@@ -2,11 +2,18 @@ import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 
 
-const MiniCard  =  ({ miniInfo }) => {
-  const [dailyData, setDailyData] = useState([]);
-const [dailyOre,setDailyOre] = useState([]);
+const MiniCard  =  ({ miniInfo } : { miniInfo: { city:{
+  name:"nome della citta"
+},list: any[]
+,forecast:number;
+} }) => {
+  
+  
+  const [dailyData, setDailyData] = useState<number[]>([]);
+const [dailyOre,setDailyOre] = useState<string[]>([]);
+
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData =() => {
       try {
         if (miniInfo && miniInfo.list && miniInfo.list.length > 0) {
           // Estrai i dati giornalieri

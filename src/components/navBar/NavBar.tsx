@@ -7,7 +7,7 @@ const NavBar:React.FC <NavProps>= ({ onSearch, onSearchs }) => {
   const [search, setSearch] = useState("");
 const[miniSearch,setMiniSearch] = useState("");
 
-  const onHandleSubmit = (e) => {
+  const onHandleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Valore di search:", search);
   console.log("Valore di miniSearch:", miniSearch);

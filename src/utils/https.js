@@ -56,5 +56,5 @@ const getWeatherCardMini = async (city) => {
     throw new Error(`Error fetching weather data: ${res.status}`);
   }
 };
-// }
+
   export { getWeatherCardMini };

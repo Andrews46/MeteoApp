@@ -1,6 +1,6 @@
 
   interface NavProps {
-   e: number;
+   e: string;
  }
  
  export  type {NavProps};

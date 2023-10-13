@@ -3,7 +3,7 @@ import styles from './App.module.scss'
 import NavBar from './components/navBar'
 import Card from './components/card'
 import MiniCard from './components/miniCard';
-import { getWeatherData ,getWeatherCardMini } from "./utils/https";
+import  { getWeatherData ,getWeatherCardMini } from "./utils/https";
 
 interface WeatherData  {
   temperature:number;
