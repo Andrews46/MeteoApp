@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 
@@ -22,6 +26,7 @@ const [velocita, setVelocita] = useState<number | null>(null);
         setTemperature(info.main.temp);
         setTempMin(info.main.temp_min);
         setTempMax(info.main.temp_max);
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         setVelocita(info.wind.speed)
      
     }

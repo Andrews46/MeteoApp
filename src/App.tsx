@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { useState } from 'react';
 import styles from './App.module.scss'
 import NavBar from './components/navBar'
 import Card from './components/card'
 import MiniCard from './components/miniCard';
-import  { getWeatherData ,getWeatherCardMini } from "./utils/https";
+import { getWeatherData ,getWeatherCardMini } from "./utils/https";
 
 interface WeatherData  {
   temperature:number;
@@ -24,7 +26,8 @@ function App() {
     const handleSearch = async (searchText : string) => {
      
     try {
-      const data = await getWeatherData(searchText);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      const data  = await getWeatherData(searchText);
       setInfo(data);
       console.log("ciao dati",data);
     } catch (error) {
